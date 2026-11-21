@@ -1,0 +1,147 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #08080A;
+  --foreground: #F5E6BF;
+  --gold-primary: #D4AF37;
+  --gold-hover: #E5C158;
+  --gold-subtle: rgba(212, 175, 55, 0.12);
+  --gold-border: rgba(212, 175, 55, 0.28);
+  --obsidian-surface: #101117;
+  --obsidian-elevated: #161720;
+}
+
+body {
+  background-color: var(--background);
+  color: #E2E4EC;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Luxury Gold Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0C0D11;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(212, 175, 55, 0.3);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(212, 175, 55, 0.6);
+}
+
+/* Glassmorphism Cards with Gold Borders */
+.gold-card {
+  background: linear-gradient(180deg, rgba(16, 17, 23, 0.85) 0%, rgba(10, 11, 15, 0.95) 100%);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(212, 175, 55, 0.1);
+  transition: all 0.25s ease;
+}
+
+.gold-card:hover {
+  border-color: rgba(212, 175, 55, 0.35);
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.8), 0 0 20px rgba(212, 175, 55, 0.08);
+}
+
+/* Metallic Gold Buttons */
+.gold-btn {
+  background: linear-gradient(135deg, #E5C158 0%, #D4AF37 50%, #B89428 100%);
+  color: #08080A;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  border-radius: 8px;
+  box-shadow: 0 2px 14px rgba(212, 175, 55, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gold-btn:hover:not(:disabled) {
+  background: linear-gradient(135deg, #F5E6BF 0%, #E5C158 50%, #D4AF37 100%);
+  box-shadow: 0 4px 22px rgba(212, 175, 55, 0.45), 0 0 12px rgba(212, 175, 55, 0.3);
+  transform: translateY(-1px);
+}
+
+.gold-btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.gold-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  filter: grayscale(0.5);
+}
+
+/* Secondary Ghost Gold Button */
+.gold-btn-secondary {
+  background: rgba(212, 175, 55, 0.08);
+  color: #F5E6BF;
+  border: 1px solid rgba(212, 175, 55, 0.28);
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.gold-btn-secondary:hover {
+  background: rgba(212, 175, 55, 0.16);
+  border-color: rgba(212, 175, 55, 0.5);
+  color: #FFFFFF;
+}
+
+/* Gold Gradient Text */
+.gold-gradient-text {
+  background: linear-gradient(135deg, #FFF1CA 0%, #E5C158 50%, #B89428 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Diff Span Highlights */
+.diff-ai-crossed {
+  color: #FF6B6B;
+  text-decoration: line-through;
+  background: rgba(255, 107, 107, 0.15);
+  padding: 1px 4px;
+  border-radius: 4px;
+  margin-right: 4px;
+}
+
+.diff-human-replaced {
+  color: #E5C158;
+  font-weight: 600;
+  background: rgba(212, 175, 55, 0.15);
+  border-bottom: 2px solid #D4AF37;
+  padding: 1px 5px;
+  border-radius: 4px;
+}
+
+/* Custom Range Input for Gold Slider */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  background: #1C1D26;
+  border-radius: 3px;
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #D4AF37;
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.6);
+  cursor: pointer;
+  border: 2px solid #08080A;
+  transition: all 0.15s ease;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+  background: #F5E6BF;
+}

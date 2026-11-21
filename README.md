@@ -138,6 +138,43 @@
 
 ---
 
+## 🚀 Turnitout Vercel Edition (Next.js Serverless + Gold & Black Theme)
+
+> **Architected & Engineered by [Jishnudip Saha](https://github.com/JishnudipSaha)**  
+> *A high-speed, modern full-stack Vercel deployment of Turnitout with a luxury Gold & Black theme, zero cold starts, and built-in serverless edge APIs.*
+
+### 🌟 Key Highlights
+* **Vercel-Native Serverless Engine:** Next.js 14 App Router with standalone serverless functions (`/api/humanize`, `/api/citations`) requiring **no external server management**.
+* **Luxury Gold & Black UI:** Obsidian void background (`#08080A`) with metallic imperial gold accents (`#D4AF37`), glowing glassmorphic cards, and custom diff highlighters.
+* **4 Full Interactive Workspaces:**
+  1. **Document & Text Humanizer:** 4 tone registers (Academic, Executive, Casual, Technical), intensity slider, protected terms blacklist, and real-time diff markup.
+  2. **Code Comment Humanizer:** String-aware AST parsing for Python, JS/TS, C++, Java with Beginner, Mid-level, and Senior Architect personas.
+  3. **Decoupled Citations & BibTeX Generator:** Injects IEEE `[1]`, APA `(Author, Year)`, or LaTeX `\cite{}` markers and compiles a companion `.bib` file.
+  4. **ZipPy Entropic Risk Auditor:** Token compression ratio analysis, sentence burstiness score, and trilateral distribution breakdown.
+* **100% Zero-Generative-AI:** Strictly deterministic pattern disruption—zero hallucinations, zero third-party API keys required, zero data stored on disk.
+
+### 💻 Local Development
+```bash
+# Clone the repository
+git clone https://github.com/JishnudipSaha/Turnitout-Humanizer.git
+cd Turnitout-Humanizer
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+```
+Open **[http://localhost:3000](http://localhost:3000)** in your browser.
+
+### ☁️ 1-Click Vercel Deployment
+1. Import `JishnudipSaha/Turnitout-Humanizer` on [Vercel](https://vercel.com).
+2. Set **Root Directory** to `./` (Default).
+3. Vercel automatically detects the **Next.js** framework preset.
+4. Click **Deploy**. Your app is live instantly on a custom `.vercel.app` domain!
+
+---
+
 ## 💡 Why Turnitout?
 
 Commercial AI humanizers use LLMs to rewrite text, leaving **new AI footprints, hallucinated facts, and cryptographic trackers intact**.
