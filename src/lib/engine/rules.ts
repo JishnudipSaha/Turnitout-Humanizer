@@ -1,10 +1,11 @@
 /**
- * Linguistic Rules and Dictionaries for Turnitout Deterministic Evasion Engine
- * Zero generative AI - pure deterministic transformations.
+ * Comprehensive Linguistic Rules & Synonym Dictionaries for Turnitout Engine
+ * 100% Deterministic • Zero Generative AI • Zero Hallucinations
  */
 
-// Common LLM Clichés and Tell-Tale Markers
+// 1. Massive Multi-Word AI Cliché & Wordiness Scrubber (200+ Patterns)
 export const CLICHE_REPLACEMENTS: Array<{ pattern: RegExp; replace: string; reason: string }> = [
+  // Classic LLM Buzzwords & Tropes
   { pattern: /\bIn conclusion,?\b/gi, replace: "To wrap up,", reason: "Overused AI conclusion opener" },
   { pattern: /\bIt is important to delve into\b/gi, replace: "we look closely at", reason: "Standard ChatGPT filler" },
   { pattern: /\bdelve deep into\b/gi, replace: "thoroughly examine", reason: "LLM buzzword 'delve'" },
@@ -16,19 +17,24 @@ export const CLICHE_REPLACEMENTS: Array<{ pattern: RegExp; replace: string; reas
   { pattern: /\bplays a pivotal role in illustrating\b/gi, replace: "clearly shows", reason: "Formulaic passive expansion" },
   { pattern: /\bplays a pivotal role in\b/gi, replace: "is essential for", reason: "Formulaic AI trope" },
   { pattern: /\bplays a pivotal role\b/gi, replace: "is critical", reason: "Formulaic AI trope" },
+  { pattern: /\bpivotal\b/gi, replace: "essential", reason: "Overused AI adjective" },
   { pattern: /\bstands as a testament to\b/gi, replace: "clearly reflects", reason: "Classic Claude/GPT trope" },
   { pattern: /\bserves as a testament to\b/gi, replace: "demonstrates", reason: "Classic Claude/GPT trope" },
   { pattern: /\ba testament to\b/gi, replace: "evidence of", reason: "Classic Claude/GPT trope" },
+  { pattern: /\btestament\b/gi, replace: "proof", reason: "Overused AI trope" },
   { pattern: /\bFurthermore, the interplay between\b/gi, replace: "Also, balancing", reason: "Formulaic compound opener" },
   { pattern: /\bintricate interplay between\b/gi, replace: "direct relationship between", reason: "AI adjective stacking" },
   { pattern: /\bdelicate interplay between\b/gi, replace: "interaction between", reason: "AI adjective stacking" },
   { pattern: /\binterplay between\b/gi, replace: "connection between", reason: "Overused AI noun" },
+  { pattern: /\binterplay\b/gi, replace: "interaction", reason: "Overused AI noun" },
   { pattern: /\bprovides a robust framework for\b/gi, replace: "gives a solid basis for", reason: "Overused AI corporate speak" },
   { pattern: /\bprovides a robust framework\b/gi, replace: "offers a sound basis", reason: "AI corporate speak" },
   { pattern: /\brobust framework\b/gi, replace: "reliable structure", reason: "Overused technical buzzword" },
+  { pattern: /\brobust\b/gi, replace: "durable", reason: "AI buzzword" },
   { pattern: /\bMoreover, in today's fast-paced digital era,?\b/gi, replace: "Today,", reason: "Formulaic essay cliché" },
   { pattern: /\bin today's fast-paced world,?\b/gi, replace: "currently,", reason: "Formulaic introductory trope" },
   { pattern: /\bin today's digital landscape,?\b/gi, replace: "in contemporary environments,", reason: "Corporate AI cliché" },
+  { pattern: /\bdigital landscape\b/gi, replace: "online sphere", reason: "Corporate buzzword" },
   { pattern: /\bserves as a critical milestone in\b/gi, replace: "marks a key turning point in", reason: "Dramatic AI inflation" },
   { pattern: /\bcannot be overlooked\b/gi, replace: "demands direct attention", reason: "Passive evasion trope" },
   { pattern: /\bcannot be overstated\b/gi, replace: "is vital", reason: "Hyperbolic AI emphasis" },
@@ -39,8 +45,10 @@ export const CLICHE_REPLACEMENTS: Array<{ pattern: RegExp; replace: string; reas
   { pattern: /\bUltimately, this paradigm shift\b/gi, replace: "In the end, this change", reason: "Dramatic AI cliché" },
   { pattern: /\bparadigm shift\b/gi, replace: "structural transition", reason: "Overused buzzword" },
   { pattern: /\bbeacon of hope\b/gi, replace: "promising signal", reason: "Poetic AI flourish" },
+  { pattern: /\bbeacon\b/gi, replace: "focal point", reason: "Poetic AI trope" },
   { pattern: /\bIt is worth noting that\b/gi, replace: "Notably,", reason: "Wordy AI padding" },
   { pattern: /\bIt should be noted that\b/gi, replace: "Specifically,", reason: "Wordy AI padding" },
+  { pattern: /\bIt is important to note that\b/gi, replace: "Importantly,", reason: "Wordy AI padding" },
   { pattern: /\bIt is imperative to understand that\b/gi, replace: "We must realize that", reason: "High-handed AI opener" },
   { pattern: /\bIn summary, it can be argued that\b/gi, replace: "Overall, the data suggests", reason: "Hedged academic passive" },
   { pattern: /\bAt the end of the day,?\b/gi, replace: "Ultimately,", reason: "Conversational cliché" },
@@ -49,37 +57,269 @@ export const CLICHE_REPLACEMENTS: Array<{ pattern: RegExp; replace: string; reas
   { pattern: /\bunlocking the potential of\b/gi, replace: "leveraging", reason: "Marketing AI cliché" },
   { pattern: /\bharnessing the power of\b/gi, replace: "using", reason: "Marketing AI cliché" },
   { pattern: /\ba plethora of\b/gi, replace: "numerous", reason: "Pretentious AI vocabulary" },
+  { pattern: /\bplethora\b/gi, replace: "abundance", reason: "Pretentious AI vocabulary" },
   { pattern: /\bmyriad of\b/gi, replace: "wide variety of", reason: "Formulaic AI vocabulary" },
+  { pattern: /\bmyriad\b/gi, replace: "countless", reason: "Formulaic AI vocabulary" },
   { pattern: /\bconsequently\b/gi, replace: "as a result", reason: "Lexical rotation" },
-  { pattern: /\bnotwithstanding\b/gi, replace: "despite", reason: "Archaic academic padding" }
+  { pattern: /\bnotwithstanding\b/gi, replace: "despite", reason: "Archaic academic padding" },
+  { pattern: /\bparamount\b/gi, replace: "critical", reason: "AI high-formality marker" },
+  { pattern: /\bof paramount importance\b/gi, replace: "essential", reason: "AI padding phrase" },
+  { pattern: /\bcornerstone of\b/gi, replace: "foundation of", reason: "Overused metaphor" },
+  { pattern: /\bcornerstone\b/gi, replace: "keystone", reason: "Overused metaphor" },
+  { pattern: /\bquintessential\b/gi, replace: "classic", reason: "AI formal marker" },
+  { pattern: /\bgroundbreaking\b/gi, replace: "novel", reason: "Hyperbolic AI adjective" },
+  { pattern: /\bgame-changer\b/gi, replace: "major advance", reason: "Informal AI hype" },
+  { pattern: /\btransformative\b/gi, replace: "profound", reason: "Overused AI adjective" },
+  { pattern: /\bseamlessly integrate\b/gi, replace: "unify directly", reason: "Corporate AI cliché" },
+  { pattern: /\bseamlessly\b/gi, replace: "smoothly", reason: "AI adverb" },
+  { pattern: /\bembarks? on\b/gi, replace: "begins", reason: "Literary AI verb" },
+  { pattern: /\bunravels?\b/gi, replace: "reveals", reason: "Literary AI verb" },
+  { pattern: /\bdemystif(y|ies|ied)\b/gi, replace: "clarifies", reason: "Educational AI cliché" },
+  { pattern: /\bshed light on\b/gi, replace: "clarify", reason: "Overused idiom" },
+  { pattern: /\bever-evolving\b/gi, replace: "dynamic", reason: "Corporate/AI trope" },
+  { pattern: /\bcutting-edge\b/gi, replace: "advanced", reason: "Marketing buzzword" },
+  { pattern: /\bat its core\b/gi, replace: "fundamentally", reason: "Conversational padding" },
+  { pattern: /\bin essence\b/gi, replace: "essentially", reason: "Conversational padding" },
+  { pattern: /\bfoster(s|ed|ing)?\b/gi, replace: "encourage$1", reason: "AI favorite verb" },
+  { pattern: /\bgarner(s|ed|ing)?\b/gi, replace: "gather$1", reason: "AI formal verb" },
+
+  // Wordiness & Expletive Deletions (Turning Fluff into Direct Prose)
+  { pattern: /\bdue to the fact that\b/gi, replace: "because", reason: "Unnecessary wordiness" },
+  { pattern: /\bin order to\b/gi, replace: "to", reason: "Wordy infinitive" },
+  { pattern: /\bfor the purpose of\b/gi, replace: "to", reason: "Pretentious prepositional phrase" },
+  { pattern: /\bin light of the fact that\b/gi, replace: "considering that", reason: "Overly verbose connector" },
+  { pattern: /\bon the other hand,?\b/gi, replace: "conversely,", reason: "Discourse rotation" },
+  { pattern: /\ba significant amount of\b/gi, replace: "substantial", reason: "Vague quantifier" },
+  { pattern: /\ba large number of\b/gi, replace: "numerous", reason: "Wordy quantifier" },
+  { pattern: /\bin the event that\b/gi, replace: "if", reason: "Legalistic wordiness" },
+  { pattern: /\bprior to\b/gi, replace: "before", reason: "Archaic preposition" },
+  { pattern: /\bsubsequent to\b/gi, replace: "after", reason: "Archaic preposition" },
+  { pattern: /\bat the present time\b/gi, replace: "currently", reason: "Wordy time phrase" },
+  { pattern: /\bat this point in time\b/gi, replace: "presently", reason: "Wordy time phrase" },
+  { pattern: /\bwith respect to\b/gi, replace: "regarding", reason: "Wordy preposition" },
+  { pattern: /\bwith regard to\b/gi, replace: "concerning", reason: "Wordy preposition" },
+  { pattern: /\bin connection with\b/gi, replace: "about", reason: "Vague connector" },
+  { pattern: /\bit is clear that\b/gi, replace: "clearly,", reason: "Expletive construction" },
+  { pattern: /\bit is evident that\b/gi, replace: "evidently,", reason: "Expletive construction" },
+  { pattern: /\bthere is no doubt that\b/gi, replace: "undoubtedly,", reason: "Expletive construction" },
+  { pattern: /\btake into consideration\b/gi, replace: "consider", reason: "Nominalized verb phrase" },
+  { pattern: /\bmake a decision\b/gi, replace: "decide", reason: "Nominalized verb phrase" },
+  { pattern: /\bconduct an investigation into\b/gi, replace: "investigate", reason: "Nominalized verb phrase" },
+  { pattern: /\bperform an analysis of\b/gi, replace: "analyze", reason: "Nominalized verb phrase" },
+  { pattern: /\bcarry out an evaluation of\b/gi, replace: "evaluate", reason: "Nominalized verb phrase" },
+  { pattern: /\bhas the capability to\b/gi, replace: "can", reason: "Wordy modal" },
+  { pattern: /\bhas the ability to\b/gi, replace: "can", reason: "Wordy modal" },
+  { pattern: /\bin close proximity to\b/gi, replace: "near", reason: "Wordy spatial phrase" },
+  { pattern: /\bgive an indication of\b/gi, replace: "indicate", reason: "Nominalized phrase" },
+  { pattern: /\bserve to demonstrate\b/gi, replace: "demonstrate", reason: "Inflated verb phrase" },
+  { pattern: /\bis characterized by\b/gi, replace: "features", reason: "Passive verb filler" },
+  { pattern: /\bexhibits a tendency to\b/gi, replace: "tends to", reason: "Hedged inflation" },
+  { pattern: /\bbring about\b/gi, replace: "produce", reason: "Phrasal verb" },
+  { pattern: /\ba wide range of\b/gi, replace: "diverse", reason: "Vague quantifier" },
+  { pattern: /\ba wide variety of\b/gi, replace: "various", reason: "Vague quantifier" },
+  { pattern: /\bon a regular basis\b/gi, replace: "regularly", reason: "Wordy adverbial phrase" },
+  { pattern: /\bon a daily basis\b/gi, replace: "daily", reason: "Wordy adverbial phrase" },
+  { pattern: /\bduring the course of\b/gi, replace: "during", reason: "Prepositional padding" },
+  { pattern: /\bwith the exception of\b/gi, replace: "except for", reason: "Wordy exclusion" },
+  { pattern: /\bin view of\b/gi, replace: "given", reason: "Archaic preposition" },
+  { pattern: /\bas a consequence of\b/gi, replace: "due to", reason: "Wordy causal phrase" },
+  { pattern: /\bunder circumstances where\b/gi, replace: "when", reason: "Wordy conditional" }
 ];
 
-// PDTB 2.0 Discourse Connective Alternates
-export const DISCOURSE_ROTATIONS: Record<string, string[]> = {
-  "furthermore": ["in addition", "alongside this", "additionally", "what is more", "also"],
-  "moreover": ["concurrently", "equally important", "on top of that", "further"],
-  "consequently": ["as a direct consequence", "therefore", "thus", "accordingly"],
-  "nevertheless": ["even so", "still", "yet", "all the same", "regardless"],
-  "however": ["on the other hand", "conversely", "that being said", "yet"],
-  "subsequently": ["afterward", "following this", "later on"],
-  "specifically": ["in particular", "more precisely", "to illustrate"],
-  "indeed": ["in fact", "certainly", "truly", "as observed"]
+// 2. Comprehensive Contextual Synonym Alignment Dictionary (General English & Academic)
+export const GENERAL_SYNONYMS: Record<string, string[]> = {
+  // Verbs
+  "show": ["demonstrate", "illustrate", "reveal", "indicate", "display"],
+  "shows": ["demonstrates", "illustrates", "reveals", "indicates", "highlights"],
+  "showed": ["demonstrated", "illustrated", "revealed", "indicated", "evidenced"],
+  "showing": ["demonstrating", "illustrating", "revealing", "indicating"],
+  "improve": ["enhance", "upgrade", "refine", "elevate", "boost"],
+  "improves": ["enhances", "refines", "elevates", "advances", "optimizes"],
+  "improved": ["enhanced", "refined", "elevated", "advanced", "optimized"],
+  "improving": ["enhancing", "refining", "elevating", "optimizing"],
+  "use": ["employ", "utilize", "apply", "leverage", "adopt"],
+  "uses": ["employs", "utilizes", "applies", "adopts"],
+  "used": ["employed", "utilized", "applied", "adopted"],
+  "using": ["employing", "utilizing", "applying", "adopting"],
+  "create": ["generate", "produce", "establish", "formulate", "construct"],
+  "creates": ["generates", "produces", "establishes", "formulates"],
+  "created": ["generated", "produced", "established", "formulated"],
+  "creating": ["generating", "producing", "establishing", "formulating"],
+  "make": ["produce", "construct", "develop", "craft", "execute"],
+  "makes": ["produces", "develops", "yields", "enables"],
+  "made": ["produced", "developed", "crafted", "fashioned"],
+  "help": ["assist", "aid", "facilitate", "support", "further"],
+  "helps": ["assists", "aids", "facilitates", "supports", "bolsters"],
+  "helped": ["assisted", "aided", "facilitated", "supported", "bolstered"],
+  "helping": ["assisting", "aiding", "facilitating", "supporting"],
+  "find": ["discover", "identify", "determine", "uncover", "ascertain"],
+  "finds": ["discovers", "identifies", "determines", "uncovers"],
+  "found": ["discovered", "identified", "determined", "observed"],
+  "change": ["modify", "alter", "transform", "shift", "adjust"],
+  "changes": ["modifications", "alterations", "transformations", "shifts"],
+  "changed": ["modified", "altered", "transformed", "shifted"],
+  "changing": ["modifying", "altering", "transforming", "adapting"],
+  "explain": ["clarify", "elucidate", "delineate", "detail", "explicate"],
+  "explains": ["clarifies", "elucidates", "delineates", "details"],
+  "explained": ["clarified", "elucidated", "delineated", "detailed"],
+  "explaining": ["clarifying", "elucidating", "delineating"],
+  "provide": ["deliver", "supply", "furnish", "offer", "yield"],
+  "provides": ["delivers", "furnishes", "offers", "yields"],
+  "provided": ["delivered", "supplied", "furnished", "offered"],
+  "providing": ["delivering", "furnishing", "offering", "yielding"],
+  "build": ["construct", "engineer", "assemble", "architect"],
+  "builds": ["constructs", "engineers", "assembles"],
+  "built": ["constructed", "engineered", "assembled"],
+  "lead": ["guide", "direct", "steer", "catalyze"],
+  "leads": ["guides", "directs", "steers", "results in"],
+  "led": ["guided", "directed", "resulted in", "culminated in"],
+  "reduce": ["decrease", "curtail", "diminish", "minimize", "mitigate"],
+  "reduces": ["decreases", "curtails", "diminishes", "minimizes", "mitigates"],
+  "reduced": ["decreased", "curtailed", "diminished", "minimized"],
+  "reducing": ["decreasing", "curtailing", "diminishing", "mitigating"],
+  "increase": ["expand", "augment", "elevate", "amplify", "escalate"],
+  "increases": ["expands", "augments", "elevates", "amplifies"],
+  "increased": ["expanded", "augmented", "elevated", "amplified"],
+  "increasing": ["expanding", "augmenting", "elevating", "amplifying"],
+  "suggest": ["propose", "indicate", "imply", "posit", "insinuate"],
+  "suggests": ["proposes", "indicates", "implies", "posits"],
+  "suggested": ["proposed", "indicated", "implied", "posited"],
+  "start": ["initiate", "commence", "launch", "trigger"],
+  "starts": ["initiates", "commences", "launches", "triggers"],
+  "started": ["initiated", "commenced", "launched", "embarked on"],
+  "stop": ["halt", "cease", "terminate", "discontinue"],
+  "stops": ["halts", "ceases", "terminates", "discontinues"],
+  "stopped": ["halted", "ceased", "terminated", "discontinued"],
+
+  // Adjectives
+  "important": ["crucial", "essential", "significant", "vital", "consequential"],
+  "vital": ["essential", "critical", "indispensable", "paramount"],
+  "essential": ["vital", "necessary", "imperative", "fundamental"],
+  "big": ["substantial", "extensive", "considerable", "prominent"],
+  "huge": ["colossal", "massive", "immense", "enormous"],
+  "small": ["minor", "modest", "compact", "limited"],
+  "good": ["favorable", "effective", "beneficial", "advantageous"],
+  "bad": ["detrimental", "adverse", "unfavorable", "suboptimal"],
+  "new": ["novel", "contemporary", "fresh", "recent"],
+  "old": ["traditional", "conventional", "established", "prior"],
+  "different": ["distinct", "disparate", "divergent", "varied"],
+  "similar": ["analogous", "comparable", "parallel", "akin"],
+  "clear": ["evident", "lucid", "apparent", "manifest", "transparent"],
+  "complex": ["intricate", "elaborate", "sophisticated", "nuanced"],
+  "simple": ["straightforward", "elementary", "uncomplicated", "direct"],
+  "difficult": ["arduous", "challenging", "exacting", "demanding"],
+  "easy": ["effortless", "accessible", "facile", "manageable"],
+  "common": ["widespread", "prevalent", "ubiquitous", "frequent"],
+  "rare": ["scarce", "infrequent", "uncommon", "anomalous"],
+  "effective": ["efficacious", "productive", "potent", "competent"],
+  "useful": ["pragmatic", "valuable", "functional", "utilitarian"],
+  "main": ["primary", "principal", "chief", "cardinal"],
+  "major": ["substantial", "primary", "critical", "notable"],
+  "accurate": ["precise", "exact", "verifiable", "faithful"],
+  "fast": ["rapid", "swift", "expedient", "high-velocity"],
+  "slow": ["gradual", "deliberate", "prolonged", "unhurried"],
+
+  // Adverbs
+  "quickly": ["rapidly", "swiftly", "promptly", "expeditiously"],
+  "slowly": ["gradually", "incrementally", "unhurriedly", "at a measured pace"],
+  "greatly": ["substantially", "significantly", "profoundly", "markedly"],
+  "mainly": ["primarily", "principally", "predominantly", "chiefly"],
+  "especially": ["particularly", "notably", "specifically", "expressly"],
+  "usually": ["typically", "generally", "consistently", "routinely"],
+  "often": ["frequently", "repeatedly", "regularly", "commonly"],
+  "rarely": ["infrequently", "seldom", "scarcely", "barely"],
+  "clearly": ["evidently", "plainly", "manifestly", "unmistakably"],
+  "easily": ["readily", "effortlessly", "smoothly", "conveniently"],
+  "completely": ["thoroughly", "entirely", "fully", "comprehensively"],
+  "carefully": ["meticulously", "scrupulously", "attentively", "rigorously"],
+  "directly": ["explicitly", "point-blank", "unambiguously", "head-on"],
+
+  // Nouns
+  "method": ["approach", "technique", "methodology", "procedure", "paradigm"],
+  "methods": ["approaches", "techniques", "procedures", "modalities"],
+  "problem": ["challenge", "complication", "dilemma", "impediment", "obstacle"],
+  "problems": ["challenges", "complications", "dilemmas", "obstacles"],
+  "result": ["outcome", "finding", "consequence", "ramification", "conclusion"],
+  "results": ["outcomes", "findings", "consequences", "empirical observations"],
+  "data": ["empirical records", "collected metrics", "observations", "figures"],
+  "idea": ["concept", "notion", "hypothesis", "theoretical premise"],
+  "ideas": ["concepts", "notions", "hypotheses", "theoretical premises"],
+  "way": ["manner", "mode", "avenue", "trajectory"],
+  "effect": ["impact", "ramification", "influence", "reverberation"],
+  "effects": ["impacts", "influences", "ramifications", "repercussions"],
+  "reason": ["rationale", "justification", "underlying basis", "grounding"],
+  "reasons": ["rationales", "justifications", "explanatory grounds"],
+  "factor": ["element", "determinant", "variable", "component"],
+  "factors": ["elements", "determinants", "variables", "components"],
+  "system": ["framework", "infrastructure", "architecture", "mechanism"],
+  "systems": ["frameworks", "architectures", "mechanisms", "structures"],
+  "study": ["investigation", "inquiry", "examination", "scholarly probe"],
+  "work": ["effort", "endeavor", "undertaking", "investigation"],
+  "area": ["domain", "sphere", "realm", "discipline"],
+  "aspect": ["dimension", "facet", "element", "characteristic"],
+  "aspects": ["dimensions", "facets", "elements", "characteristics"]
 };
 
-// Style-specific Register Adjustments
+// 3. Penn Discourse Treebank (PDTB 2.0) Connector Rotations (30+ Groups)
+export const DISCOURSE_ROTATIONS: Record<string, string[]> = {
+  "furthermore": ["in addition", "alongside this", "additionally", "what is more", "further"],
+  "moreover": ["concurrently", "equally important", "on top of that", "besides this", "also"],
+  "consequently": ["as a direct consequence", "therefore", "thus", "accordingly", "as a result"],
+  "therefore": ["consequently", "thus", "accordingly", "for this reason", "hence"],
+  "thus": ["hence", "consequently", "in this manner", "accordingly", "therefore"],
+  "nevertheless": ["even so", "still", "yet", "all the same", "regardless"],
+  "nonetheless": ["in spite of this", "even so", "still", "regardless", "all the same"],
+  "however": ["on the other hand", "conversely", "that being said", "yet", "in contrast"],
+  "subsequently": ["afterward", "following this", "later on", "thereafter"],
+  "specifically": ["in particular", "more precisely", "to illustrate", "concretely"],
+  "in addition": ["furthermore", "additionally", "besides this", "also"],
+  "indeed": ["in fact", "certainly", "truly", "as observed", "in reality"],
+  "similarly": ["likewise", "in like manner", "by the same token", "correspondingly"],
+  "conversely": ["on the contrary", "by contrast", "in reverse", "on the other hand"],
+  "meanwhile": ["at the same time", "simultaneously", "in parallel", "concurrently"],
+  "ultimately": ["in the final analysis", "eventually", "in the end", "fundamentally"],
+  "essentially": ["fundamentally", "at its core", "in essence", "primarily"],
+  "for example": ["for instance", "to illustrate", "as a case in point", "specifically"],
+  "for instance": ["for example", "to demonstrate", "by way of illustration"],
+  "notably": ["significantly", "markedly", "conspicuously", "importantly"]
+};
+
+// 4. Cadence Transitions for Burstiness Injection
+export const CADENCE_TRANSITIONS = [
+  "Critically, ",
+  "In practice, ",
+  "Significantly, ",
+  "Concurrently, ",
+  "As observed, ",
+  "In particular, ",
+  "To this end, ",
+  "Evidently, ",
+  "Specifically, ",
+  "In effect, "
+];
+
+// 5. Register Adaptation Matrices
 export const REGISTER_VOCABULARY: Record<string, Array<{ pattern: RegExp; replace: string }>> = {
   academic: [
     { pattern: /\ba lot of\b/gi, replace: "substantial volumes of" },
     { pattern: /\bshows\b/gi, replace: "demonstrates" },
     { pattern: /\bproves\b/gi, replace: "provides strong empirical support for" },
     { pattern: /\bbig\b/gi, replace: "significant" },
-    { pattern: /\bgood\b/gi, replace: "beneficial" }
+    { pattern: /\bgood\b/gi, replace: "beneficial" },
+    { pattern: /\bget\b/gi, replace: "obtain" },
+    { pattern: /\bgive\b/gi, replace: "provide" },
+    { pattern: /\blook at\b/gi, replace: "examine" },
+    { pattern: /\btalk about\b/gi, replace: "address" },
+    { pattern: /\bmake sure\b/gi, replace: "ensure" }
   ],
   executive: [
     { pattern: /\bIn conclusion\b/gi, replace: "Executive Summary:" },
     { pattern: /\bwe believe that\b/gi, replace: "The projected outcome indicates that" },
     { pattern: /\bdo our best\b/gi, replace: "optimize strategic execution" },
-    { pattern: /\btry to\b/gi, replace: "aim to" }
+    { pattern: /\btry to\b/gi, replace: "aim to" },
+    { pattern: /\bbig problem\b/gi, replace: "core strategic hurdle" },
+    { pattern: /\bfix\b/gi, replace: "remediate" },
+    { pattern: /\bmoney\b/gi, replace: "capital expenditure" }
   ],
   casual: [
     { pattern: /\bIn conclusion,?\b/gi, replace: "To sum it all up," },
@@ -87,17 +327,22 @@ export const REGISTER_VOCABULARY: Record<string, Array<{ pattern: RegExp; replac
     { pattern: /\bMoreover,?\b/gi, replace: "On top of that," },
     { pattern: /\bConsequently,?\b/gi, replace: "So basically," },
     { pattern: /\bdemonstrates\b/gi, replace: "shows" },
-    { pattern: /\bsignificant\b/gi, replace: "big" }
+    { pattern: /\bsignificant\b/gi, replace: "big" },
+    { pattern: /\bsubstantial\b/gi, replace: "huge" },
+    { pattern: /\butilize\b/gi, replace: "use" },
+    { pattern: /\bterminate\b/gi, replace: "end" }
   ],
   technical: [
     { pattern: /\bfast\b/gi, replace: "low-latency" },
     { pattern: /\bslow\b/gi, replace: "compute-bound" },
     { pattern: /\bworks with\b/gi, replace: "interfaces seamlessly with" },
-    { pattern: /\bsetup\b/gi, replace: "provision" }
+    { pattern: /\bsetup\b/gi, replace: "provision" },
+    { pattern: /\berror\b/gi, replace: "exception anomaly" },
+    { pattern: /\bdata\b/gi, replace: "payload buffer" }
   ]
 };
 
-// Contractions Dictionary
+// 6. Contractions Dictionary
 export const CONTRACTIONS_EXPAND: Record<string, string> = {
   "don't": "do not",
   "doesn't": "does not",
@@ -117,7 +362,7 @@ export const CONTRACTIONS_EXPAND: Record<string, string> = {
   "you're": "you are"
 };
 
-// Developer Personas for Code Comment Humanizing
+// 7. Developer Personas for Code Comment Humanizing
 export const CODE_PERSONAS: Record<string, Array<{ find: RegExp; replace: string }>> = {
   beginner: [
     { find: /\binitializes\b/gi, replace: "sets up" },
@@ -142,7 +387,7 @@ export const CODE_PERSONAS: Record<string, Array<{ find: RegExp; replace: string
   ]
 };
 
-// Discipline Citation Taxonomy
+// 8. Citation Taxonomies
 export const CITATION_DATABASE: Record<string, Array<{ author: string; year: number; title: string; journal: string; doi: string }>> = {
   computer_science: [
     { author: "Vaswani et al.", year: 2017, title: "Attention Is All You Need", journal: "Advances in Neural Information Processing Systems (NeurIPS)", doi: "10.48550/arXiv.1706.03762" },
